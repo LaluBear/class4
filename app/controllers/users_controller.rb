@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   def createnew
     name = params[:name]
     email = params[:email]
-    User.create(name: name, email: email)
+    @user = User.create(name: name, email: email)
   end
   private
     # Use callbacks to share common setup or constraints between actions.

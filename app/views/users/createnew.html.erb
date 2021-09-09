@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User get recreated</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @user.email %></td>
+        <td><%= @user.name %></td>
+        <td><%= @user.birthday %></td>
+      </tr>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Index', '/users' %>

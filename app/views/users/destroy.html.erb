@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>User get destroyed</h1>
 
 <table>
   <thead>
@@ -19,11 +19,11 @@
         <td><%= @userdel.birthday %></td>
         <td><%= link_to 'Show', @userdel %></td>
         <td><%= link_to 'Edit', edit_user_path(@userdel) %></td>
-        <td><%= link_to 'Recreate','/create_fast'%></td>
+        <td><%= link_to 'Recreate',"/create_fast?name=#{@userdel.name}&email=#{@userdel.email}"%></td>
       </tr>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'Index', '/users' %>
