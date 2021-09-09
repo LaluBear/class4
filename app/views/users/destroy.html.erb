@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @userdel.email %></td>
+        <td><%= @userdel.name %></td>
+        <td><%= @userdel.birthday %></td>
+        <td><%= link_to 'Show', @userdel %></td>
+        <td><%= link_to 'Edit', edit_user_path(@userdel) %></td>
+        <td><%= link_to 'Recreate','/create_fast'%></td>
+      </tr>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
