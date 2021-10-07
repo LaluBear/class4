@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
@@ -25,10 +30,12 @@
   <%= @user.postal_code %>
 </p>
 
-<%= link_to 'New Post', "/posts/new?user_id=#{@user.id}"%> 
+
+
+<%= link_to 'New Post', "/users/#{@user.id}/createpost"%> 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-<br><br>
+<%= link_to 'Back', "/user" %>
+
 <table>
 	<thead>
 		<td>
@@ -46,8 +53,8 @@
 		<td>
 		<br><%=post.created_at%>
 		</td>
-		<td><%= link_to 'Edit', "/posts/#{post.id}/edit}", method: 'post'%></td>
-        	<td><%= link_to 'Destroy', "/destroypost", method: 'post',  data: { confirm: 'Are you sure?' } %></td>
+		<td><%= link_to 'Edit', "/posts/#{post.id}/edit"%></td>
+        	<td><%= link_to 'Destroy', "/posts/#{post.id}", method: 'delete',  data: { confirm: 'Are you sure?' } %></td>
 	</tr>	
 	<%end%>
 </table>
